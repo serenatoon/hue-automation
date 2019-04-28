@@ -4,13 +4,12 @@ import json
 
 
 def turn_off_light(ip, id):
-	url = "http://" + ip + "/api/" + id + "/lights/3/state" # todo: light number as arg
-	body = {
-		"on": False
-	}
-	req = requests.put(url, json.dumps(body))
-	print req.json()
-
+    url = "http://" + ip + "/api/" + id + "/lights/3/state"  # todo: light number as arg
+    body = {
+        "on": False
+    }
+    req = requests.put(url, json.dumps(body))
+    print req.json()
 
 
 if __name__ == "__main__":
